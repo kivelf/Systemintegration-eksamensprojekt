@@ -15,8 +15,8 @@ namespace Delopgave_3_2
         // Der skal kunne tjekkes, om den, der ønsker at tilmelde sig en aktivitet, er medlem.
 
         // queues
-        private static MessageQueue TilmeldingssystemQueue;
-        private static MessageQueue MedlemsregisterQueue;
+        private static MessageQueue tilmeldingssystemQueue;
+        private static MessageQueue medlemsregisterQueue;
 
         static void Main(string[] args)
         {
@@ -49,15 +49,15 @@ namespace Delopgave_3_2
             {
                 MessageQueue.Create(@".\Private$\L21TilmeldingssystemQueue");
             }
-            TilmeldingssystemQueue = new MessageQueue(@".\Private$\L21TilmeldingssystemQueue");
-            TilmeldingssystemQueue.Label = "Tilmeldingssystem Queue";
+            tilmeldingssystemQueue = new MessageQueue(@".\Private$\L21TilmeldingssystemQueue");
+            tilmeldingssystemQueue.Label = "Tilmeldingssystem Queue";
 
             if (!MessageQueue.Exists(@".\Private$\L21MedlemsregisterQueue"))
             {
                 MessageQueue.Create(@".\Private$\L21MedlemsregisterQueue");
             }
-            MedlemsregisterQueue = new MessageQueue(@".\Private$\L21MedlemsregisterQueue");
-            MedlemsregisterQueue.Label = "Medlemsregister Queue";
+            medlemsregisterQueue = new MessageQueue(@".\Private$\L21MedlemsregisterQueue");
+            medlemsregisterQueue.Label = "Medlemsregister Queue";
         }
     }
 }

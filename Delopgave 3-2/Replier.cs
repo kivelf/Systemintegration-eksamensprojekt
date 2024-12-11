@@ -45,16 +45,17 @@ namespace Delopgave_3_2
                     XMLDocument = reader.ReadToEnd();
                 }
 
-                // læser status fra reply beskeden
                 XmlDocument xml = new XmlDocument();
                 xml.LoadXml(XMLDocument);
                 string medlemsnummer = xml.SelectSingleNode("ForespoergselOmMedlemskab/Medlemsnummer").InnerText;
 
+                // preparing to send back a reply
                 MessageQueue replyQueue = requestMessage.ResponseQueue;
 
                 string label = $"Medslemskabsstatus for {medlemsnummer}";
                 string status = "";
 
+                // hardcodede værdier - i virkeligheden vil man læse data fra DB'en
                 switch (medlemsnummer)
                 {
                     case "12345":
@@ -89,6 +90,7 @@ namespace Delopgave_3_2
 
                 replyMessage.CorrelationId = requestMessage.Id;
 
+                // udskriver Correlation ID (den bliver ikke brugt andre steder...)
                 Console.WriteLine("replyMessage.CorrelationId == requestMessage.Id == " + replyMessage.CorrelationId.ToString());
                 replyQueue.Send(replyMessage);
             }
@@ -97,6 +99,7 @@ namespace Delopgave_3_2
                 requestMessage.CorrelationId = requestMessage.Id;
             }
 
+            // continue listening for messages
             requestQueue.BeginReceive();
         }
     }

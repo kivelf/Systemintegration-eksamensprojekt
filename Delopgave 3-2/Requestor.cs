@@ -65,10 +65,10 @@ namespace Delopgave_3_2
             MessageQueue mq = (MessageQueue)source;
 
             Message message = mq.EndReceive(asyncResult.AsyncResult);
-            // fjerner 'Medslemskabsstatus for ' fra beskeden
+            // fjerner 'Medslemskabsstatus for ' fra label for at læse medlemsnummeret
             string medlemsnummer = message.Label.Substring(23);
 
-            // read the content from the original message once
+            // read the content from the original message
             string XMLDocument;
             using (Stream body = message.BodyStream)
             using (StreamReader reader = new StreamReader(body))

@@ -25,9 +25,10 @@ namespace Delopgave_3_2
             String request = @".\Private$\L21MedlemsregisterQueue";
             String reply = @".\Private$\L21TilmeldingssystemQueue";
 
-            Requestor req1 = new Requestor(request, reply, "22334");    // medlem
-            Requestor req2 = new Requestor(request, reply, "98765");    // ikke-medlem
-            Requestor req3 = new Requestor(request, reply, "22334");    // medlem
+            // opretter objekter der repræsenterer vores 2 systemer
+            Requestor req1 = new Requestor(request, reply, "22334");    // request for medlem
+            Requestor req2 = new Requestor(request, reply, "98765");    // request for ikke-medlem
+            Requestor req3 = new Requestor(request, reply, "22334");    // request for medlem
             Replier replier = new Replier(request);
 
             // sender nogle requests og får nogle replies tilbage (med simulering af lidt ventetid mellem beskederne :) )
@@ -38,7 +39,6 @@ namespace Delopgave_3_2
             Thread.Sleep(5000);
 
             req3.Send();
-            Thread.Sleep(5000);
 
             while (true) { }
         }

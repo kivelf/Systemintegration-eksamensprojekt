@@ -24,12 +24,6 @@ namespace Opgave_7
             get => americanDate;
         }
 
-        // computed property to get the American date as a string in MM/dd/yyyy format
-        public string AmericanDateString
-        {
-            get => americanDate?.ToString("MM/dd/yyyy", CultureInfo.InvariantCulture);
-        }
-
         // method to set the American date from a string
         public void SetAmericanDateFromString(string americanDateString)
         {

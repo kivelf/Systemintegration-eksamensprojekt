@@ -92,7 +92,7 @@ namespace Opgave_7
             Console.WriteLine("Medlemmer i Medlemsregisteret:");
             foreach (Medlem m in Medlemmer) 
             {
-                Console.WriteLine(m.MedlemsNummer + " " + m.Fornavn + " " + m.Efternavn);
+                Console.WriteLine(m.MedlemsNummer + " " + m.Fornavn + " " + m.Efternavn + ", nyhedsbrev: " + m.ErTilmeldtNyhedsbrev);
             }
             Console.WriteLine("------------------------------");
         }

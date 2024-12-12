@@ -68,7 +68,7 @@ namespace Opgave_7
             Console.WriteLine("Newsletter subscribers:");
             foreach (NewsletterSubscriber s in Subscribers)
             {
-                Console.WriteLine(s.MembershipNumber + " " + s.Name + ", subscribed since: " + s.AmericanDate);
+                Console.WriteLine(s.MembershipNumber + " " + s.Name + ", subscribed since: " + s.AmericanDate.ToString("MM/dd/yyyy"));
             }
             Console.WriteLine("------------------------------");
         }

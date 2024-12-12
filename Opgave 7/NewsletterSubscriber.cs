@@ -16,10 +16,10 @@ namespace Opgave_7
         public String Mail { get; set; }
 
         // internal storage for the American date
-        private DateTime? americanDate;
+        private DateTime americanDate;
 
         // property to get or set the American date as a DateTime
-        public DateTime? AmericanDate
+        public DateTime AmericanDate
         {
             get => americanDate;
         }

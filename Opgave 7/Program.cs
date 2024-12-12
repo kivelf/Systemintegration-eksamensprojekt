@@ -40,7 +40,8 @@ namespace Opgave_7
             }
 
             medlemsregister.PrintMedlemmer();
-            Thread.Sleep(1500);
+            Console.WriteLine("Retrieving newsletter subscriber list, please wait...");
+            Thread.Sleep(3000);
             nyhedsbrev.PrintNewsletterSubscribers();
 
             while (true) { }
@@ -90,7 +91,7 @@ namespace Opgave_7
                 ByNavn = "Odense C",
                 MailAdresse = "bob@thebob.dk",
                 ErTilmeldtNyhedsbrev = true,
-                DatoBrev = "09. november 2024"
+                DatoBrev = "29. november 2024"
             };
 
             Medlem medlem3 = new Medlem
@@ -115,7 +116,7 @@ namespace Opgave_7
                 ByNavn = "Aarhus C",
                 MailAdresse = "jim@doe.dk",
                 ErTilmeldtNyhedsbrev = true,
-                DatoBrev = "09. august 2023"
+                DatoBrev = "18. august 2023"
             };
 
             Medlem medlem5 = new Medlem

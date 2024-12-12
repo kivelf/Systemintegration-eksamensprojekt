@@ -21,7 +21,7 @@ namespace Delopgave_3_2
         static void Main(string[] args)
         {
             // opretter queues
-            createQueues();
+            CreateQueues();
             String request = @".\Private$\L21MedlemsregisterQueue";
             String reply = @".\Private$\L21TilmeldingssystemQueue";
 
@@ -43,7 +43,7 @@ namespace Delopgave_3_2
             while (true) { }
         }
 
-        private static void createQueues()
+        private static void CreateQueues()
         {
             if (!MessageQueue.Exists(@".\Private$\L21TilmeldingssystemQueue"))
             {

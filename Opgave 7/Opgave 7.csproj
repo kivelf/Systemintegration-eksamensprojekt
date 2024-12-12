@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Medlem.cs" />
     <Compile Include="Medlemsregister.cs" />
+    <Compile Include="NewsletterSubscriber.cs" />
     <Compile Include="Nyhedsbrev.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

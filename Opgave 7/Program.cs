@@ -32,7 +32,7 @@ namespace Opgave_7
             nyhedsbrev = new Nyhedsbrev(translatedMessageQueue);
             translator = new Translator(outQueue, translatedMessageQueue);
 
-            // opretter nogle medlemmer (obs, at der bliver oprettet 5, men kun 3 er tilmeldt nyhedsbrevet!)
+            // opretter nogle medlemmer (obs, at der bliver oprettet 5 medlemmer, men kun 3 er tilmeldt nyhedsbrevet!)
             CreateMembers();
             foreach (var member in medlemmer) 
             { 
